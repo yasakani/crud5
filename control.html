@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Control de Asistencia a los Foros de Consulta Pública">
+		<meta name="author" content="Alejandro Quintero">
+		<title>Control de Asistencia &laquo; Foros de Consulta Pública</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="css/control.css" rel="stylesheet" media="screen">
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.form.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/jquery.total-storage.min.js"></script>
+		<script src="js/control.js"></script>
+	</head>
+	<body>
+		
+		<div id="wrap">
+			
+			<!-- Fixed navbar -->
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="brand" href="#"> Foros de Consulta Pública para la Elaboración del Plan de Desarrollo Municpal 2013-2015 </a>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Begin page content -->
+			<div class="container">
+				
+				<div class="page-header">
+					<h2>Control de Asistencia a Foros de Consulta Ciudadana</h2>
+				</div>
+				
+				<form action="#" method="post" id="form_registro">
+					
+					<fieldset>
+						
+						<legend>Formulario de registro</legend>
+						
+						<div class="row">
+							
+							<div class="span4">
+								<label for="ap_pater">Apellido Paterno</label>
+								<input type="text" name="ap_pater" id="ap_pater">
+							</div>
+							
+							<div class="span4">
+								<label for="ap_mater">Apellido Materno</label>
+								<input type="text" name="ap_mater" id="ap_mater">
+							</div>
+							
+							<div class="span4">
+								<label for="nombre">Nombre(s)</label>
+								<input type="text" name="nombre" id="nombre">
+							</div>
+							
+						</div>
+						
+						<div class="row">
+							
+							<div class="span4">
+								<label for="telefono">Teléfono</label>
+								<input type="tel" name="telefono" id="telefono">
+							</div>
+							
+							<div class="span4">
+								<label for="correo">Correo electrónico</label>
+								<input type="email" name="correo" id="correo">
+							</div>
+							
+							<div class="span4">
+								
+								<label>Tipo de participación</label>
+								
+								<label class="radio inline">
+									<input type="radio" name="participacion" id="invitado" value="invitado" checked="checked"> <b>Invitado</b>
+								</label>
+								
+								<label class="radio inline">
+									<input type="radio" name="participacion" id="participante" value="participante"> <b>Participante</b>
+								</label>
+								
+							</div>
+							
+						</div>
+						
+						<div class="row">
+							
+							<div class="span4">
+								<label for="domicilio">Domicilio</label>
+								<textarea name="domicilio" id="domicilio" rows="3"></textarea>
+							</div>
+							
+							<div class="span4">
+								<label>Foros &raquo; Tema &raquo; <b>Obras y Servicios Públicos</b></label>
+								<div id="forumsfields">
+									<label class="radio foro">
+									  <input type="radio" name="foro" id="optionsRadios" value="option">
+									  <span>Option one</span>
+									</label>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="row">
+							<div class="span2">
+								<button class="btn btn-primary btn-large">Registrar</button>
+							</div>
+							<div class="span6" style="margin-top:10px;">
+								<span id="msg" class="label label-success" style="display:none;">¡El registro se ha completado con exito!</span>
+							</div>
+						</div>
+						
+					</fieldset>
+					
+				</form>
+				
+				<div id="stored-data">
+					
+					<div class="page-header">
+						<h3>Asistencias registradas</h3>
+					</div>
+					
+					<table class="table table-bordered table-hover">
+						
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Domicilio</th>
+								<th>Teléfono</th>
+								<th>Correo Electrónico</th>
+								<th>Participación</th>
+								<th>Foro</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td class="data-nombre">-</td>
+								<td class="data-domicilio">-</td>
+								<td class="data-telefono">-</td>
+								<td class="data-correo">-</td>
+								<td class="data-participacion">-</td>
+								<td class="data-foro">-</td>
+							</tr>
+						</tbody>
+						
+					</table>
+					
+				</div>
+				
+			</div>
+			
+			<div id="footer">
+				<div class="container">
+					<p class="muted credit">
+						Planeación y Evaluación Municipal &laquo; <b>Municipio de Cuautitlán Izcalli</b>
+					</p>
+				</div>
+			</div>
+			
+		</div>
+
+	</body>
+</html>

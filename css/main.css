@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.hero-unit-custom {
+	padding: 25px;
+	margin-bottom: 30px;
+	/*font-size: 18px;*/
+	/*font-weight: 200;*/
+	/*line-height: 30px;*/
+	color: inherit;
+	background-color: #eeeeee;
+}
+
+#assist_form {
+	width: 700px;
+	margin: 0px auto;
+	padding: 0;
+}
+
+#assist_form input[type=text], #assist_form input[type=email], #assist_form input[type=tel] {
+	font-size: 24px;
+	padding: 10px;
+	width: 400px;
+	font-weight: bold;
+}
+
+#domicilio {
+width: 410px;
+height: 90px;
+font-size: 25px;
+font-weight: bold;
+}
+
+.label_option {
+font-size: 20px;
+font-weight: bold;
+}
+
+.action {
+	margin: 20px 0;
+}
+
+.action button {
+	font-size: 24px;
+font-weight: bold;
+padding: 10px;
+width: 145px;
+} 
+
+#stored-data table {
+	width:100%;
+	border-collapse: collapse;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Control de Asistencia">
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.total-storage.min.js"></script>
+        <script type="text/javascript" src="js/jquery.form.js"></script>
+        <script src="js/main.js"></script>
+        
+        <title>Control de Asistencia &laquo; Planeación y Evaluación Municipal</title>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Planeación y Evaluación Municipal</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#captura">Captura</a></li>
+                            <li><a href="#consulta">Consulta</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit-custom">
+                <h1>Control de Asistencia</h1>
+                <h3>Control de Asistencia a los Foros de Consulta Ciudadana.</h3>
+            </div>
+            
+            <!-- Mensaje de operación -->
+			<div id="msg" class="rounded hide">#msg</div>
+            
+            <!-- Formulario de registro de asistencia -->
+            <div id="assist_form">
+            	
+            	<form action="index.html" method="post" id="form_registro" class="col col_5">
+            		
+            		<fieldset class="s_column">
+	            		
+	            		<legend>Formulario de asistencia</legend>
+	            		
+	            		<div>
+	            			<label for="ap_pater">Apellido Paterno</label>
+	            			<input type="text" name="ap_pater" id="ap_pater" required="required" value="">
+	            		</div>
+	            		
+	            		<div>
+	            			<label for="ap_mater">Apellido Materno</label>
+	            			<input type="text" name="ap_mater" id="ap_mater" required="required" value="">
+	            		</div>
+	            		
+	            		<div>
+	            			<label for="nombre">Nombre(s)</label>
+	            			<input type="text" name="nombre" id="nombre" required="required" value="">
+	            		</div>
+	            		
+	            		<div>
+	            			<h5>Participación</h5>
+	            			<div>
+	            				<div style="float:left;">
+			            			<label for="invitado" class="label_option">
+			            				<input type="radio" name="participacion" value="invitado" id="invitado">
+			            				Invitado
+			            			</label>
+	            				</div>
+	            				<div style="float:left;margin-left:20px;">
+			            			<label for="participante" class="label_option">
+			            				<input type="radio" name="participacion" value="participante" id="participante">
+			            				Participante
+			            			</label>
+	            				</div>
+	            				
+	            				<div class="clearfix"></div>
+	            				
+	            			</div>
+	            		</div>
+	            		
+	            		<div>
+	            			<label for="domicilio">Domicilio</label>
+	            			<textarea name="domicilio" id="domicilio"></textarea>
+	            		</div>
+	            		
+	            		<div>
+	            			<label for="telefono">Teléfono</label>
+	            			<input type="tel" name="telefono" id="telefono" required="required" value="">
+	            		</div>
+	            		
+	            		<div>
+	            			<label for="correo">Correo Electrónico</label>
+	            			<input type="email" name="correo" id="correo" required="required" value="">
+	            		</div>
+	            		
+	            		<div class="field" id="forumsfields">
+	            			Foro: TEMA: Salud y Familia
+	            			<label for="foro" class="foro label_option">
+	            				<input type="radio" name="foro" value="foro" id="foro">
+	            				<span>Foro</span>
+	            			</label>
+	            		</div>
+	            		
+	            		<div class="action">
+	            			<button type="submit">Registrar</button>
+	            		</div>
+	            		
+	            	</fieldset>
+	            		            		
+            	</form>
+            	
+            </div>
+
+            <hr>
+
+			<div id="stored-data">
+				
+				<h2>Asistencias registradas</h2>
+				
+				<table>
+					
+					<thead>
+						<tr>
+							<!--th>ID</th-->
+							<th>Nombre</th>
+							<th>Domicilio</th>
+							<th>Teléfono</th>
+							<th>Correo Electrónico</th>
+							<th>Participación</th>
+							<th>Foro</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<!--td class="data-id">ID</td-->
+							<td class="data-nombre">Nombre</td>
+							<td class="data-domicilio">Domicilio</td>
+							<td class="data-telefono">Teléfono</td>
+							<td class="data-correo">Correo Electrónico</td>
+							<td class="data-participacion">Participación</td>
+							<td class="data-foro">Foro</td>
+						</tr>
+					</tbody>
+					
+				</table>
+				
+				
+			</div>
+
+
+
+            <footer>
+                <p>Planeación y Evaluación Municpal</p>
+            </footer>
+
+		</div> <!-- /container -->
+
+    </body>
+</html>
